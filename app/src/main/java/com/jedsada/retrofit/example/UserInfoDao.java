@@ -2,7 +2,7 @@ package com.jedsada.retrofit.example;
 
 import com.google.gson.annotations.SerializedName;
 
-public class UserInfo {
+public class UserInfoDao {
     @SerializedName("login")
     private String login;
     @SerializedName("id")
@@ -39,11 +39,11 @@ public class UserInfo {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        UserInfo userInfo = (UserInfo) o;
+        UserInfoDao userInfoDao = (UserInfoDao) o;
 
-        if (id != userInfo.id) return false;
-        if (login != null ? !login.equals(userInfo.login) : userInfo.login != null) return false;
-        return url != null ? url.equals(userInfo.url) : userInfo.url == null;
+        if (id != userInfoDao.id) return false;
+        if (login != null ? !login.equals(userInfoDao.login) : userInfoDao.login != null) return false;
+        return url != null ? url.equals(userInfoDao.url) : userInfoDao.url == null;
     }
 
     @Override
@@ -56,7 +56,7 @@ public class UserInfo {
 
     @Override
     public String toString() {
-        return "UserInfo{" +
+        return "UserInfoDao{" +
                 "login='" + login + '\'' +
                 ", id=" + id +
                 ", url='" + url + '\'' +
